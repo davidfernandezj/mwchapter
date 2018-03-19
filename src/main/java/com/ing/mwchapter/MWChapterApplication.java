@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MwchapterApplication {
+public class MWChapterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MwchapterApplication.class, args);
+		SpringApplication.run(MWChapterApplication.class, args);
 	}
 }
