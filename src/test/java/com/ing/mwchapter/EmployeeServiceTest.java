@@ -9,18 +9,13 @@ import com.ing.mwchapter.services.IEmployeeService;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.ing.mwchapter.repository.EmployeeRepository.*;
 
 public class EmployeeServiceTest {
 
     private IEmployeeService employeeService = new EmployeeServiceImpl(new EmployeeRepository());
-
 
     @Test
     public void testGetListOfEmployeeNames() {
@@ -87,6 +82,52 @@ public class EmployeeServiceTest {
         Map<Gender, List<Employee>> employeesByGender = employeeService.getEmployeesByGender();
         //Then
         Assert.assertEquals(employeesByGender, expectedResult);
+    }
+
+    @Test
+    public void testGetAverageSalary() {
+        //Given
+
+        //When
+        Double averageSalary = employeeService.getAverageSalary();
+        //Then
+        Assert.assertEquals((Double) 35885.71428571428, averageSalary);
+    }
+
+    @Test
+    public void testGetAverageSalaryBySeniority() {
+        //Given
+        Map<Seniority, Double> expectedResult = new HashMap<>();
+        expectedResult.put(Seniority.JUNIOR, 14050.0);
+        expectedResult.put(Seniority.MIDDLE, 26300.0);
+        expectedResult.put(Seniority.SENIOR, 72100.0);
+        //When
+        Map<Seniority, Double> averageSalaryBySeniority = employeeService.getAverageSalaryBySeniority();
+        //Then
+        Assert.assertEquals(expectedResult, averageSalaryBySeniority);
+    }
+
+    @Test
+    public void testEmployee_ok() {
+        //Given
+
+        //When
+        Optional<Employee> employee = employeeService.getEmployee("Juan", "Gomez");
+        //Then
+        Assert.assertTrue(employee.isPresent());
+        Employee juanGomez = employee.get();
+        Assert.assertEquals(juanGomez, JUAN);
+    }
+
+    @Test
+    public void testEmployee_error() {
+        //Given
+
+        //When
+        Optional<Employee> employee = employeeService.getEmployee("Juan", "Fernandez");
+        //Then
+        Assert.assertFalse(employee.isPresent());
+
     }
 
 
