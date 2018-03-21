@@ -19,6 +19,7 @@ import static com.ing.mwchapter.repository.EmployeeRepository.*;
 
 public class EmployeeServiceTest {
 
+
     private IEmployeeService employeeService = new EmployeeServiceImpl(new EmployeeRepository());
 
 
@@ -89,5 +90,18 @@ public class EmployeeServiceTest {
         Assert.assertEquals(employeesByGender, expectedResult);
     }
 
+    @Test
+    public void testGetAverageSalaryBySeniority() {
+        //Given
+        Map<Seniority, Double> expectedResult = new HashMap<>();
+        expectedResult.put(Seniority.MIDDLE, 26300d);
+        expectedResult.put(Seniority.JUNIOR, 14050d);
+        expectedResult.put(Seniority.SENIOR, 27100d);
+
+        //When
+        Map<Seniority, Double> averageSalaryBySeniority = employeeService.getAverageSalaryBySeniority();
+        //Then
+        Assert.assertEquals(averageSalaryBySeniority, expectedResult);
+    }
 
 }
