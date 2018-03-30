@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 @Component
 public class EmployeeServiceImpl implements IEmployeeService {
@@ -59,6 +60,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public Optional<Employee> getEmployee(String name, String surname) {
+        //TODO: Implement me
+        return null;
+    }
+
+    @Override
+    public Set<String> getSkills() {
         //TODO: Implement me
         return null;
     }
