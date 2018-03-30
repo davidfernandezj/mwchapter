@@ -7,6 +7,7 @@ import com.ing.mwchapter.domain.Seniority;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 public interface IEmployeeService {
 
@@ -24,4 +25,5 @@ public interface IEmployeeService {
 
     Optional<Employee> getEmployee(String name, String surname);
 
+    Set<String> getSkills();
 }
