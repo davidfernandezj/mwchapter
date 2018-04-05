@@ -6,6 +6,8 @@ import com.ing.mwchapter.domain.Seniority;
 import com.ing.mwchapter.repository.EmployeeRepository;
 import com.ing.mwchapter.services.EmployeeServiceImpl;
 import com.ing.mwchapter.services.IEmployeeService;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -131,4 +133,15 @@ public class EmployeeServiceTest {
     }
 
 
+    @Test
+    public void testEmployeesSkills() {
+        //Given
+
+        //When
+        Set<String> skills = employeeService.getSkills();
+
+        //Then
+        Assert.assertThat(skills, Matchers.hasSize(7));
+        Assert.assertThat(skills, Matchers.containsInAnyOrder("Java", "Javascript", "TDD", "Spring", "F2E", "Polymer", "Cassandra"));
+    }
 }
