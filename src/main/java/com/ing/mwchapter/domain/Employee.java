@@ -1,9 +1,11 @@
 package com.ing.mwchapter.domain;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
-
+@Getter
 public class Employee extends Person {
     private final Double salary;
     private final Seniority seniority;
@@ -16,13 +18,4 @@ public class Employee extends Person {
         this.skills = CollectionUtils.arrayToList(skills);
     }
 
-    public Double getSalary() {
-        return salary;
-    }
-
-    public Seniority getSeniority() {
-        return seniority;
-    }
-
-    public List<String> getSkills() { return skills; }
 }

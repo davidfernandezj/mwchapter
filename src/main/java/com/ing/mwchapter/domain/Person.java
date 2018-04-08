@@ -1,5 +1,8 @@
 package com.ing.mwchapter.domain;
 
+import lombok.Getter;
+
+@Getter
 public class Person {
     private final PersonId personId;
     private final String name;
@@ -13,25 +16,5 @@ public class Person {
         this.surname = surname;
         this.age = age;
         this.gender = gender;
-    }
-
-    public PersonId getPersonId() {
-        return personId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public Gender getGender() {
-        return gender;
     }
 }

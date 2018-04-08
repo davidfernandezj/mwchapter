@@ -1,5 +1,8 @@
 package com.ing.mwchapter.domain;
 
+import lombok.Getter;
+
+@Getter
 public class PersonId {
     private final String id;
 
@@ -7,7 +10,4 @@ public class PersonId {
         this.id = id;
     }
 
-    public String getId() {
-        return id;
-    }
 }
