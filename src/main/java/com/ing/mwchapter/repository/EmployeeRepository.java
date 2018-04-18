@@ -16,13 +16,13 @@ public class EmployeeRepository {
 
     private static AtomicInteger COUNTER = new AtomicInteger(1);
 
-    public static final Employee MARIO = new Employee(generatePersonId(), "Mario", "Jimenez", 20, MALE, 18200.0, JUNIOR);
-    public static final Employee JUAN = new Employee(generatePersonId(), "Juan", "Gomez", 30, MALE, 2500.0, MIDDLE);
-    public static final Employee ELENA = new Employee(generatePersonId(), "Elena", "Perez", 60, FEMALE, 100000.0, SENIOR);
-    public static final Employee SOFIA = new Employee(generatePersonId(), "Sofia", "Mateos", 55, FEMALE, 44200.0, SENIOR);
-    public static final Employee NURIA = new Employee(generatePersonId(), "Nuria", "Toledano", 45, FEMALE, 41200.0, MIDDLE);
-    public static final Employee PEDRO = new Employee(generatePersonId(), "Pedro", "Fernandez", 39, MALE, 35200.0, MIDDLE);
-    public static final Employee CARLOS = new Employee(generatePersonId(), "Carlos", "Gomez", 18, MALE, 9900.0, JUNIOR);
+    public static final Employee MARIO = new Employee(generatePersonId(), "Mario", "Jimenez", 20, MALE, 18200.0, JUNIOR, "Javascript", "Polymer");
+    public static final Employee JUAN = new Employee(generatePersonId(), "Juan", "Gomez", 30, MALE, 2500.0, MIDDLE, "Java", "Javascript", "Spring");
+    public static final Employee ELENA = new Employee(generatePersonId(), "Elena", "Perez", 60, FEMALE, 100000.0, SENIOR, "F2E", "Cassandra");
+    public static final Employee SOFIA = new Employee(generatePersonId(), "Sofia", "Mateos", 55, FEMALE, 44200.0, SENIOR, "Java", "Spring");
+    public static final Employee NURIA = new Employee(generatePersonId(), "Nuria", "Toledano", 45, FEMALE, 41200.0, MIDDLE, "TDD");
+    public static final Employee PEDRO = new Employee(generatePersonId(), "Pedro", "Fernandez", 39, MALE, 35200.0, MIDDLE, "Javascript", "TDD", "Polymer");
+    public static final Employee CARLOS = new Employee(generatePersonId(), "Carlos", "Gomez", 18, MALE, 9900.0, JUNIOR, "Java", "F2E");
 
     private static final List<Employee> EMPLOYEES = Arrays.asList(
             MARIO, JUAN, ELENA, SOFIA, NURIA, PEDRO, CARLOS
