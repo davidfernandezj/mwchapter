@@ -1,15 +1,15 @@
 package com.ing.mwchapter;
 
-import com.ing.mwchapter.services.FibonacciService;
+import com.ing.mwchapter.services.FibonacciServiceImpl;
 import com.ing.mwchapter.services.IFibonacciService;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigInteger;
 
-public class FibonacciServiceTest {
+public class FibonacciServiceImplTest {
 
-    private IFibonacciService fibonacciService = new FibonacciService();
+    private IFibonacciService fibonacciService = new FibonacciServiceImpl();
 
     @Test(expected = IllegalArgumentException.class)
     public void testGetFibonacciNegativePosition() {

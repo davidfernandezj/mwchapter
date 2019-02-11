@@ -4,7 +4,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.math.BigInteger;
 
-public class FibonacciService implements IFibonacciService {
+public class FibonacciServiceImpl implements IFibonacciService {
 
     @Override
     public BigInteger getFibonacciNumber(int position) {
