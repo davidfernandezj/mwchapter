@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import java.math.BigInteger;
 
-public class FibonacciServiceImplTest {
+public class FibonacciServiceTest {
 
     private IFibonacciService fibonacciService = new FibonacciServiceImpl();
 
