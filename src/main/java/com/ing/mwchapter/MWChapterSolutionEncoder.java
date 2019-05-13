@@ -126,7 +126,14 @@ public class MWChapterSolutionEncoder {
 	@Getter
 	private enum SecretResource {
 		KEYBOARD("src/main/java/com/ing/mwchapter/services/impl/KeyboardServiceProposalImpl.java",
-				"src/main/java/com/ing/mwchapter/services/impl/KeyboardServiceProposalImpl.encoded");
+				"src/main/java/com/ing/mwchapter/services/impl/KeyboardServiceProposalImpl.encoded"),
+
+		EMPLOYEE("src/main/java/com/ing/mwchapter/services/impl/EmployeeServiceProposalImpl.java",
+				"src/main/java/com/ing/mwchapter/services/impl/EmployeeServiceProposalImpl.encoded"),
+
+		FIBONACCI("src/main/java/com/ing/mwchapter/services/impl/FibonacciServiceProposalImpl.java",
+						 "src/main/java/com/ing/mwchapter/services/impl/FibonacciServiceProposalImpl.encoded");
+
 
 		private final String plain;
 		private final String encoded;
