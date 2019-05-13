@@ -1,7 +1,7 @@
 package com.ing.mwchapter;
 
 import com.ing.mwchapter.services.IKeyboardService;
-import com.ing.mwchapter.services.impl.KeyboardServiceImpl;
+import com.ing.mwchapter.services.impl.*;
 import org.junit.Assert;
 import org.junit.Test;
 

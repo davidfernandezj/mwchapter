@@ -4,7 +4,7 @@ import com.ing.mwchapter.domain.Employee;
 import com.ing.mwchapter.domain.Gender;
 import com.ing.mwchapter.domain.Seniority;
 import com.ing.mwchapter.repository.EmployeeRepository;
-import com.ing.mwchapter.services.impl.EmployeeServiceImpl;
+import com.ing.mwchapter.services.impl.*;
 import com.ing.mwchapter.services.IEmployeeService;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
