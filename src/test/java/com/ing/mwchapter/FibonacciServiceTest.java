@@ -1,6 +1,6 @@
 package com.ing.mwchapter;
 
-import com.ing.mwchapter.services.FibonacciServiceImpl;
+import com.ing.mwchapter.services.impl.FibonacciServiceImpl;
 import com.ing.mwchapter.services.IFibonacciService;
 import org.junit.Assert;
 import org.junit.Test;
