@@ -72,7 +72,6 @@ public class MWChapterSolutionEncoder {
 		byte[] fileBytes = readFileBytes(fileToDecode);
 		byte[] decodedBytes = cipher.doFinal(fileBytes);
 		writeFileBytes(resource.getPlain(), decodedBytes);
-		Files.delete(fileToDecode);
 	}
 
 	private static void decodeFiles(Cipher cipher, SecretKey secretKey) {
